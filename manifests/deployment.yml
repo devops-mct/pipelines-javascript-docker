@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: devopsmctpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devopsmctpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: devopsmctpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: devopsmctpipelinesjavascriptdocker 
+          image: myartcodatacr2.azurecr.io/devopsmctpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
